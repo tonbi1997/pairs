@@ -1,0 +1,13 @@
+import random
+path='affiUrl.txt'
+with open(path) as f:
+    urlList = f.readlines()
+    f.close()
+size=len(urlList)
+delFig=ramdom.randint(0,size-1)
+url=urlList[delFlg]
+urlList.pop(delFig)
+
+with open(path, 'w') as f:
+    for url in urlList:
+        f.write("%s\n" % url)
